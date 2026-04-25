@@ -70,10 +70,14 @@ Each configuration was trained independently and evaluated on the held-out test 
 ---
 
 ## Project Structure
+## Project Structure
 
-Project Structure
+```
 ML-Projects/
-└── GRULSTM_Activity_Recognition_(HAPT_dataset).ipynb
+└── CLIP_Zero-Shot_Classification_&_Retrieval_(CIFAR-100).ipynb
+```
+
+---
 The notebook is self-contained and covers all experiments sequentially:
 
 Data loading, windowing, and DataLoader setup
@@ -82,14 +86,18 @@ Training loop with per-epoch loss logging
 All ablation runs with a final summary results table
 
 ## How to Run
-bashpip install torch numpy scikit-learn matplotlib
+
+```bash
+# Install dependencies
+pip install torch numpy scikit-learn matplotlib
 
 Download the HAPT dataset from the UCI repository
 Update DATA_DIR in the notebook to point to your local dataset path
 Run the notebook top to bottom
+```
 
 ---
-
+'''
 ## Concepts Demonstrated
 
 - **Recurrent neural networks** — GRU and LSTM for variable-length sequences
@@ -101,6 +109,6 @@ Run the notebook top to bottom
 
 ## References
 
-- [HAPT Dataset — UCI ML Repository](https://archive.ics.uci.edu/ml/datasets/Smartphone-Based+Recognition+of+Human+Activities+and+Postural+Transitions)
+- [HAPT Dataset — UCI ML Repository](https://archive.ics.uci.edu/dataset/341/smartphone+based+recognition+of+human+activities+and+postural+transitions)
 - [GRU Paper — Cho et al., 2014](https://arxiv.org/abs/1406.1078)
 - [LSTM Paper — Hochreiter & Schmidhuber, 1997](https://www.bioinf.jku.at/publications/older/2604.pdf)
