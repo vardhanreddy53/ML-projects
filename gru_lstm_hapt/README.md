@@ -12,7 +12,7 @@ Human Activity and Postural Transitions (HAPT) is a classic time-series classifi
 
 ## Dataset
 
-- **Source:** [UCI HAPT Dataset](https://archive.ics.uci.edu/ml/datasets/Smartphone-Based+Recognition+of+Human+Activities+and+Postural+Transitions)
+- **Source:** [UCI HAPT Dataset](https://archive.ics.uci.edu/dataset/341/smartphone+based+recognition+of+human+activities+and+postural+transitions)
 - **Input:** 6 sensor channels (3-axis accelerometer + 3-axis gyroscope)
 - **Classes:** 12 activity/transition labels (walking, sitting, standing, transitions, etc.)
 - **Format:** Raw time-series sequences, pre-split into train/test
@@ -71,38 +71,22 @@ Each configuration was trained independently and evaluated on the held-out test 
 
 ## Project Structure
 
-```
-gru-lstm-activity-recognition/
-├── data/
-│   ├── train/
-│   └── test/
-├── dataset.py          # DataLoader and sequence preprocessing
-├── model.py            # GRU and LSTM model definitions
-├── train.py            # Training loop with logging
-├── evaluate.py         # Test accuracy evaluation
-├── ablation.py         # Runs all ablation configurations
-├── results/
-│   └── ablation_results.csv
-└── README.md
-```
+Project Structure
+ML-Projects/
+└── GRULSTM_Activity_Recognition_(HAPT_dataset).ipynb
+The notebook is self-contained and covers all experiments sequentially:
 
----
+Data loading, windowing, and DataLoader setup
+GRU and LSTM model definitions
+Training loop with per-epoch loss logging
+All ablation runs with a final summary results table
 
 ## How to Run
+bashpip install torch numpy scikit-learn matplotlib
 
-```bash
-# Install dependencies
-pip install torch numpy scikit-learn matplotlib
-
-# Train baseline GRU
-python train.py --model gru --hidden_size 32 --num_layers 1
-
-# Run all ablations
-python ablation.py
-
-# Evaluate a saved model
-python evaluate.py --checkpoint checkpoints/gru_32_1.pt
-```
+Download the HAPT dataset from the UCI repository
+Update DATA_DIR in the notebook to point to your local dataset path
+Run the notebook top to bottom
 
 ---
 
