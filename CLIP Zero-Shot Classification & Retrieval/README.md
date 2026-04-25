@@ -51,9 +51,16 @@ This project explores two capabilities of CLIP's joint vision-language embedding
 
 ### Text-to-Image Retrieval Queries
 - `"a yellow school bus"` → Top-5 all correctly retrieved (bus class)
+- <img width="2144" height="466" alt="retrieval_a_yellow_school" src="https://github.com/user-attachments/assets/32d92980-0741-4c17-b19f-5672e476a37f" />
+
 - `"a flying butterfly"` → Top-5 all correctly retrieved (butterfly class)
+- <img width="2144" height="466" alt="retrieval_a_flying_butter" src="https://github.com/user-attachments/assets/69b6a3ec-beb1-4c20-8933-2003f507a75d" />
+
 - `"a desk lamp"` → Top-5 all correctly retrieved (lamp class)
+- <img width="2144" height="466" alt="retrieval_a_desk_lamp" src="https://github.com/user-attachments/assets/4c17b8de-2626-4646-9512-8e33845d3e76" />
+
 - `"a turtle swimming"` → Top-5 all correctly retrieved (turtle class)
+- <img width="2144" height="466" alt="retrieval_a_turtle_swimmi" src="https://github.com/user-attachments/assets/cf03b170-52bb-47d3-a6bb-d86e24baca6c" />
 
 ---
 
@@ -71,15 +78,8 @@ This project explores two capabilities of CLIP's joint vision-language embedding
 ## Project Structure
 
 ```
-clip-zero-shot-cifar100/
-├── clip_classification.py     # Baseline zero-shot classification
-├── prompt_engineering.py      # Multi-template prompt averaging
-├── retrieval.py               # Text-to-image retrieval pipeline
-├── utils.py                   # Embedding helpers, plotting functions
-├── results/
-│   ├── confusion_matrix.png
-│   └── retrieval_results/
-└── README.md
+ML-Projects/
+└── CLIP_Zero-Shot_Classification_&_Retrieval_(CIFAR-100).ipynb
 ```
 
 ---
@@ -88,16 +88,9 @@ clip-zero-shot-cifar100/
 
 ```bash
 # Install dependencies
-pip install torch torchvision transformers scikit-learn matplotlib seaborn
+pip install torch torchvision transformers scikit-learn matplotlib pillow
 
-# Run baseline classification
-python clip_classification.py
-
-# Run prompt-engineered classification
-python prompt_engineering.py
-
-# Run text-to-image retrieval
-python retrieval.py
+Then open and run the notebook top to bottom. CIFAR-100 downloads automatically on first run.
 ```
 
 ---
